@@ -1,0 +1,258 @@
+@use "assets/scss/colors.scss";
+
+header {
+    .header-extra {
+        .path-icon {
+            margin-left: 3.9rem;
+        }
+
+        hr {
+
+            width: calc(100% - 10rem);
+            position: absolute;
+            top: calc(50% - 0.1rem);
+            left: 2rem;
+            left: 16.7rem;
+            opacity: 0.25;
+            z-index: 3;
+        }
+
+        .menu {
+            display: none;
+            margin: 1.4rem;
+            height: 4.1rem;
+            padding: 1rem;
+            background: inherit;
+            outline: none;
+            border: none;
+
+            .bar {
+                background: colors.$white;
+                height: .3rem;
+                width: 2.4rem;
+                position: relative;
+                transition: all 0.5s ease-out;
+
+                &::before,
+                &::after {
+                    content: "";
+                    height: .3rem;
+                    width: 2.4rem;
+                    background: colors.$white;
+                    position: absolute;
+                    transition: all 0.5s;
+                    left: 0;
+                }
+
+                &::before {
+                    top: -.9rem;
+                }
+
+                &::after {
+                    top: .9rem;
+                }
+            }
+
+            &:is(.bars):hover .bar {
+                transform: translateX(-60%);
+                width: 2.8rem;
+
+                &::before,
+                &::after {
+                    transform: translateX(30%);
+                    width: 2.8rem;
+                }
+            }
+
+
+            &:is(.cross) {
+                .bar {
+                    background-color: transparent;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        height: .3rem;
+                        width: 2.4rem;
+                        background: colors.$white;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    &::before {
+                        transform: rotate(45deg);
+                    }
+
+                    &::after {
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                &:hover {
+
+                    .bar,
+                    .bar::before,
+                    .bar::after {
+                        width: 2.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    nav {
+
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(4.07rem);
+        transition: all .7s;
+
+        .navbar {
+            display: flex;
+
+            li {
+                a {
+                    display: inline-block;
+                    border-bottom: .3rem solid transparent;
+                    transition: all .4s;
+                    padding-block: 3.9rem;
+
+                    .bold-text {
+                        margin-right: 1.2rem;
+                    }
+
+                    &:hover {
+                        border-bottom: .3rem solid #ffffff4d;
+                    }
+
+                    &:is(.active-navlink) {
+                        border-bottom: .3rem solid #fff;
+                    }
+
+                }
+            }
+        }
+    }
+
+    &:is(.show-nav) {
+        nav {
+            right: 0;
+        }
+    }
+
+    &:is(.hide-nav) {
+        nav {
+            right: -100%;
+        }
+    }
+
+}
+
+/* styles for mobile screens */
+@media only screen and (max-width: 767px) {
+    header {
+        position: relative;
+
+        .header-extra {
+            position: absolute;
+            z-index: 4;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .path-icon {
+                margin: 2.4rem;
+                width: 4rem;
+                height: 4rem;
+            }
+
+            hr {
+                display: none;
+            }
+
+            .menu {
+                display: block;
+            }
+
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            height: 100vh;
+            width: 26.7rem;
+
+            .navbar {
+                flex-direction: column;
+                padding-top: 11.8rem;
+
+                li {
+                    padding: 1rem 3rem;
+
+                    a {
+                        padding-block: .6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* styles for tablet screens */
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+
+        .header-extra {
+            display: flex;
+            align-items: center;
+
+            hr {
+                display: none;
+            }
+        }
+
+        nav {
+            padding-inline: 4.8rem;
+
+            .navbar {
+                gap: 4rem;
+
+                li a {
+                    padding-block: 3.9rem;
+
+                    .bold-text {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* styles for desktop screens */
+@media only screen and (min-width: 1440px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 4rem;
+
+        .header-extra {
+            flex-grow: 1;
+            position: relative;
+        }
+
+        nav {
+            padding-inline: 12.3rem;
+
+            .navbar {
+                gap: 5rem;
+            }
+        }
+    }
+}

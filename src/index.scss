@@ -1,0 +1,110 @@
+@use "assets/scss/colors";
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./assets/fonts/Barlow.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Bold";
+  src: url("./assets/fonts/Barlow-Bold.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Bellefair";
+  src: url("./assets/fonts/Bellefair.ttf") format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: colors.$black;
+  color: colors.$white;
+}
+
+h1 {
+  font-size: 15rem;
+}
+
+h2 {
+  font-size: 10rem;
+}
+
+h3 {
+  font-size: 5.6rem;
+}
+
+h4 {
+  font-size: 3.2rem;
+}
+
+h5 {
+  font-size: 2.8rem;
+  letter-spacing: .475rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+.subheading-1 {
+  font-family: "Bellefair"
+}
+
+p,
+.text,
+.nav-text,
+.subheading-2 {
+  font-family: "Barlow"
+}
+
+.subheading-1 {
+  font-size: 2.8rem;
+}
+
+.Subheading-2 {
+  font-size: 1.4rem;
+  letter-spacing: .235rem;
+}
+
+.nav-text {
+  font-size: 1.6rem;
+  letter-spacing: .27rem;
+  line-height: 1.9rem;
+}
+
+.text,
+p {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+}
+
+.bold-text {
+  font-family: "Bold";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav-text {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: .236rem;
+  }
+}
+
