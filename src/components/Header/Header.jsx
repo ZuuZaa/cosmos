@@ -20,22 +20,22 @@ export const Header = () => {
       <nav >
         <ul className="navbar">
           <li className="nav-text">
-            <NavLink to="/" activeclassname="active-navlink">
+            <NavLink exact="true" to="/" activeclassname="active">
               <span className="bold-text">00</span>HOME
             </NavLink>
           </li>
           <li className="nav-text">
-            <NavLink to="/" activeclassname="active-navlink">
+            <NavLink to="/destination" activeclassname="active">
               <span className="bold-text">01</span>DESTINATION
             </NavLink>
           </li>
           <li className="nav-text">
-            <NavLink to="/" activeclassname="active-navlink">
+            <NavLink to="/" activeclassname="active">
               <span className="bold-text">02</span>CREW
             </NavLink>
           </li>
           <li className="nav-text">
-            <NavLink to="/" activeclassname="active-navlink">
+            <NavLink to="/" activeclassname="active">
               <span className="bold-text">03</span>TECHNOLOGY
             </NavLink>
           </li>
