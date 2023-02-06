@@ -6,6 +6,11 @@
 }
 
 @font-face {
+  font-family: "Barlow Condensed";
+  src: url("./assets/fonts/BarlowCondensed.ttf") format('truetype');
+}
+
+@font-face {
   font-family: "Bold";
   src: url("./assets/fonts/Barlow-Bold.ttf") format('truetype');
 }
@@ -25,13 +30,27 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  background-color: colors.$black;
-  color: colors.$white;
+body {}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background: inherit;
+  outline: none;
+  border: none;
 }
 
 h1 {
-  font-size: 15rem;
+  font-family: "Bellefair";
+  font-weight: 400;
+  color: colors.$white;
 }
 
 h2 {
@@ -43,12 +62,12 @@ h3 {
 }
 
 h4 {
-  font-size: 3.2rem;
+  //font-family: "Bellefair";
 }
 
 h5 {
-  font-size: 2.8rem;
-  letter-spacing: .475rem;
+  font-family: 'Barlow Condensed';
+  color: colors.$light;
 }
 
 h1,
@@ -63,7 +82,8 @@ p,
 .text,
 .nav-text,
 .subheading-2 {
-  font-family: "Barlow"
+  color: colors.$light;
+  font-family: "Barlow";
 }
 
 .subheading-1 {
@@ -79,32 +99,101 @@ p,
   font-size: 1.6rem;
   letter-spacing: .27rem;
   line-height: 1.9rem;
-}
-
-.text,
-p {
-  font-size: 1.8rem;
-  line-height: 3.2rem;
+  color: colors.$white;
 }
 
 .bold-text {
   font-family: "Bold";
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 8rem;
+    line-height: 10rem;
+  }
 
-ul {
-  list-style: none;
-}
+  h4 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: .125rem;
+  }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  h5 {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: .27rem;
+  }
+
   .nav-text {
     font-size: 1.4rem;
     line-height: 1.7rem;
     letter-spacing: .236rem;
   }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
 }
 
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  h1 {
+    font-size: 15rem;
+    line-height: 15rem;
+  }
+
+  h4 {
+    font-size: 3.2rem;
+    line-height: 3.7rem;
+    letter-spacing: .2rem;
+  }
+
+  h5 {
+    font-size: 2rem;
+    letter-spacing: .3375rem;
+    line-height: 2.4rem;
+  }
+
+  .nav-text {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: .236rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  h1 {
+    font-size: 15rem;
+    line-height: 17.2rem;
+  }
+
+  h4 {
+    font-size: 3.2rem;
+    line-height: 3.7rem;
+    letter-spacing: .2rem;
+  }
+
+  h5 {
+    font-size: 2.8rem;
+    letter-spacing: .472rem;
+    line-height: 3.4rem;
+  }
+
+
+  .nav-text {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: .236rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+}
