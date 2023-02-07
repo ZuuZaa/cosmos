@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 export const Home = () => {
     return (
@@ -11,9 +12,11 @@ export const Home = () => {
                     </div>
                 </div>
                 <div className="explore">
-                    <button className="explore-button">
-                        <h4>EXPLORE</h4>
-                    </button>
+                    <Link to="/destination">
+                        <button className="explore-button">
+                            <h4>EXPLORE</h4>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>

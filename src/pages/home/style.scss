@@ -30,6 +30,10 @@
                 border-radius: 50%;
                 background: colors.$white;
                 color: colors.$black;
+                transition: outline-width .3s, opacity .3s;
+                &:hover {
+                    outline: 8.8rem solid rgba(255, 255, 255, 0.1);
+                }
             }
         }
     }
