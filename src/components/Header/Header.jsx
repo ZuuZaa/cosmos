@@ -5,7 +5,6 @@ import { useState } from "react";
 export const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false);
-  console.log("object", isOpen)
   const menuToggle = () => setIsOpen(!isOpen);
 
   return (
