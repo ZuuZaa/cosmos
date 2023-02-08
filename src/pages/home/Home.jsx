@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export const Home = () => {
     return (
-        <section className="home-page">
+        <section className="home-page" id="home-page">
             <div className="page-wrapper">
                 <div className="page-content">
                     <div className="content-text">

@@ -29,12 +29,12 @@ export const Header = () => {
             </NavLink>
           </li>
           <li className="nav-text">
-            <NavLink to="/" activeclassname="active">
+            <NavLink to="/crew" activeclassname="active">
               <span className="bold-text">02</span>CREW
             </NavLink>
           </li>
           <li className="nav-text">
-            <NavLink to="/" activeclassname="active">
+            <NavLink to="/technology" activeclassname="active">
               <span className="bold-text">03</span>TECHNOLOGY
             </NavLink>
           </li>

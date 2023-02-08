@@ -1,0 +1,197 @@
+@use "assets/scss/colors.scss";
+
+.destination-content {
+
+    .destination-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .destination-card {
+        nav {
+            text-transform: uppercase;
+
+            ul {
+                display: flex;
+
+                li {
+
+                    a {
+                        padding-bottom: 1.2rem;
+                        display: inline-block;
+
+                        &:is(.active) {
+                            border-bottom: .3rem solid colors.$white;
+                        }
+                    }
+                }
+            }
+        }
+
+        hr {
+            border: .1rem solid #383B4B;
+        }
+
+        .card-footer {
+            display: flex;
+
+            .text {
+                margin-top: 1.2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .destination-content {
+        .destination-img {
+            margin-top: 3.2rem;
+
+            img {
+                width: 17rem;
+                height: 17rem;
+            }
+        }
+
+        .destination-card {
+            margin-top: 2.6rem;
+
+            nav {
+                ul {
+                    justify-content: space-evenly;
+
+                    li {
+                        a {
+                            padding-bottom: .8rem;
+                        }
+                    }
+                }
+            }
+
+            .destination-name {
+                padding-top: 2rem;
+            }
+
+            .destination-decsription {
+                margin-top: .1rem;
+            }
+
+            hr {
+                margin-block: 3.2rem;
+            }
+
+            .card-footer {
+                flex-direction: column;
+                gap: 3.2rem;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+
+    .destination-container {
+        text-align: center;
+
+        .destination-content {
+            .destination-img {
+                margin-top: 6rem;
+
+                img {
+                    width: 30rem;
+                    height: 30rem;
+                }
+            }
+
+            .destination-card {
+                margin: 5.3rem auto 0;
+                width: 57.3rem;
+
+                nav {
+                    ul {
+                        justify-content: space-evenly;
+
+                        li {
+                            a {
+                                padding-bottom: .8rem;
+                            }
+                        }
+                    }
+                }
+
+                .destination-name {
+                    padding-top: 3.2rem;
+                }
+
+                .destination-decsription {
+                    margin-top: .8rem;
+                }
+
+                hr {
+                    margin-block: 4.8rem 2.8rem;
+                }
+
+                .card-footer {
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+
+    .destination-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        .destination-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .destination-card {
+                width: 44.5rem;
+
+                nav {
+
+                    ul {
+                        display: flex;
+
+                        li {
+                            margin-right: 3.6rem;
+
+                            a {
+                                padding-bottom: 1.2rem;
+
+                            }
+                        }
+                    }
+                }
+
+                .destination-name {
+                    margin-top: 3.7rem;
+                }
+
+                .destination-decsription {
+                    margin-top: 1.4rem;
+                }
+
+                hr {
+                    margin-top: 5.4rem;
+                }
+
+                .card-footer {
+                    margin-top: 2.8rem;
+                    gap: 6.8rem;
+
+                }
+            }
+        }
+    }
+}

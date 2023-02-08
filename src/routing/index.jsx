@@ -1,7 +1,9 @@
-import { DestinationContent } from "components/DestinationContent";
-import { MainLayout } from "components/MainLayout";
+import { DestinationContent } from "components/destinationContent";
+import { MainLayout } from "components/mainLayout";
+import { Crew } from "pages/crew";
 import { Destination } from "pages/destination";
 import { Home } from "pages/home";
+import { Technology } from "pages/technology";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 export const Routing = () => {
@@ -14,7 +16,14 @@ export const Routing = () => {
                     <Route index element={<Navigate to="/destination/moon" />} />
                     <Route path=":name" element={<DestinationContent />} />
                 </Route>
-                {/*  <Route path="/completed" element={<CompletesTodos />} /> */}
+                <Route path="/crew" element={<Crew />}>
+                    {/* <Route index element={<Navigate to="/destination/moon" />} />
+                    <Route path=":name" element={<DestinationContent />} /> */}
+                </Route>
+                <Route path="/technology" element={<Technology />}>
+                    {/* <Route index element={<Navigate to="/destination/moon" />} />
+                    <Route path=":name" element={<DestinationContent />} /> */}
+                </Route>
             </Route>
         </Routes>
     )

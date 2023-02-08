@@ -10,33 +10,51 @@
 
 @media screen and (max-width: 767px) {
     .main-layout {
-        &:has(.home-page) {
+        &:has(#home-page) {
             background-image: url("../../assets/images/home/background-home-mobile.jpg");
         }
-        &:has(.destination-page) {
+        &:has(#destination-page) {
             background-image: url("../../assets/images/destination/background-destination-mobile.jpg");
+        }
+        &:has(#crew-page) {
+            background-image: url("../../assets/images/crew/background-crew-mobile.jpg");
+        }
+        &:has(#technology-page) {
+            background-image: url("../../assets/images/technology/background-technology-mobile.jpg");
         }
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
     .main-layout {
-        &:has(.home-page) {
+        &:has(#home-page) {
             background-image: url("../../assets/images/home/background-home-tablet.jpg");
         }
-        &:has(.destination-page) {
+        &:has(#destination-page) {
             background-image: url("../../assets/images/destination/background-destination-tablet.jpg");
+        }
+        &:has(#crew-page) {
+            background-image: url("../../assets/images/crew/background-crew-tablet.jpg");
+        }
+        &:has(#technology-page) {
+            background-image: url("../../assets/images/technology/background-technology-tablet.jpg");
         }
     }
 }
 
 @media screen and (min-width: 1440px) {
     .main-layout {
-        &:has(.home-page) {
+        &:has(#home-page) {
             background-image: url("../../assets/images/home/background-home-desktop.jpg");
         }
-        &:has(.destination-page) {
+        &:has(#destination-page) {
             background-image: url("../../assets/images/destination/background-destination-desktop.jpg");
+        }
+        &:has(#crew-page) {
+            background-image: url("../../assets/images/crew/background-crew-desktop.jpg");
+        }
+        &:has(#technology-page) {
+            background-image: url("../../assets/images/technology/background-technology-desktop.jpg");
         }
     }
 }
