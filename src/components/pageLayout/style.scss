@@ -1,6 +1,6 @@
 @media only screen and (max-width: 768px) {
     .page-layout {
-        min-height: calc(100vh - 8.8rem);
+        height: calc(100vh - 8.8rem);
         padding: 8.8rem 2.4rem 3rem;
         text-align: center;
     }
@@ -11,7 +11,7 @@
     .page-layout {
         padding: 4rem 2.4rem 0;
         text-align: start;
-        min-height: calc(100vh - 9.8rem);
+        height: calc(100vh - 9.8rem);
     }
 }
 

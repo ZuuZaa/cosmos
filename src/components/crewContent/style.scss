@@ -1,0 +1,243 @@
+ @use "assets/scss/colors.scss";
+
+
+  @media only screen and (max-width: 768px) {
+    .page-layout:has(.crew-container) {
+        padding-bottom: 0;
+       // overflow-y: hidden;
+    }
+
+    .crew-container {
+       // height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+       // 
+
+        .crew-content {
+
+            .info {
+                display: flex;
+                flex-direction: column-reverse;
+
+                .role {
+                    opacity: .5;
+                }
+
+                .name {
+                    margin-top: .8rem;
+                    white-space: nowrap;
+                }
+
+                .bio {
+                    margin-top: 1.6rem;
+                    height: 10rem;
+                   // padding-inline: 6rem;
+                }
+
+                nav {
+                    margin-block: 3.2rem;
+                    display: flex;
+                    justify-content: center;
+
+                    ul {
+                        width: 8.8rem;
+                        display: flex;
+                        justify-content: space-between;
+
+                        a {
+                            background: colors.$white;
+                            display: inline-block;
+                            height: 1rem;
+                            width: 1rem;
+                            border-radius: 50%;
+                            opacity: .17;
+
+                            &:is(.active) {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .image-container {
+            padding-top: 3.2rem;
+            border-bottom: .1rem solid #ffffff40;
+           // flex-grow: 1;
+           // padding: 4rem;
+           
+            display: flex;
+            justify-content: center;
+            //position: relative;
+
+            .image-wrapper {
+                height: 32.7rem;
+                //position: absolute;
+                top: 4rem;
+                //align-self: stretch;
+                bottom: 0;
+                //height: calc(100% - 4rem);
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+  }
+
+
+ @media only screen and (min-width: 768px) and (max-width: 1439px) {
+     .page-layout:has(.crew-container) {
+         padding-bottom: 0;
+         overflow-y: hidden;
+     }
+
+     .crew-container {
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+         padding-top: 6rem;
+
+         .crew-content {
+
+             .info {
+                 display: flex;
+                 flex-direction: column;
+
+                 .role {
+                     opacity: .5;
+                 }
+
+                 .name {
+                     margin-top: .8rem;
+                     white-space: nowrap;
+                 }
+
+                 .bio {
+                     margin-top: 1.6rem;
+                     height: 8.4rem;
+                     padding-inline: 6rem;
+                 }
+
+                 nav {
+                     margin-top: 4rem;
+                     display: flex;
+                     justify-content: center;
+
+                     ul {
+                         width: 8.8rem;
+                         display: flex;
+                         justify-content: space-between;
+
+                         a {
+                             background: colors.$white;
+                             display: inline-block;
+                             height: 1rem;
+                             width: 1rem;
+                             border-radius: 50%;
+                             opacity: .17;
+
+                             &:is(.active) {
+                                 opacity: 1;
+                             }
+                         }
+                     }
+                 }
+             }
+
+         }
+
+         .image-container {
+             flex-grow: 1;
+             padding: 4rem;
+             display: flex;
+             justify-content: center;
+             position: relative;
+
+             .image-wrapper {
+                 position: absolute;
+                 top: 4rem;
+                 align-self: stretch;
+                 bottom: 0;
+                 height: calc(100% - 4rem);
+
+                 img {
+                     height: 100%;
+                 }
+             }
+         }
+     }
+ }
+
+ @media only screen and (min-width: 1440px) {
+     .page-layout:has(.crew-container) {
+         overflow-y: hidden;
+         position: relative;
+         padding-bottom: 0;
+     }
+
+     .crew-container {
+         display: grid;
+         grid-template-columns: 61.4rem 1fr;
+         align-items: center;
+         height: 100%;
+
+
+         .crew-content {
+             .info {
+                 display: flex;
+                 flex-direction: column;
+
+                 .role {
+                     opacity: .5;
+                 }
+
+                 .name {
+                     margin-top: 1.5rem;
+                     white-space: nowrap;
+                 }
+
+                 .bio {
+                     margin-top: 2.7rem;
+                     width: 44.4rem;
+                     height: 16rem;
+                 }
+
+                 nav {
+                     margin-top: 12rem;
+
+                     ul {
+                         width: 13.2rem;
+                         display: flex;
+                         justify-content: space-between;
+
+                         a {
+                             background: colors.$white;
+                             display: inline-block;
+                             height: 1.5rem;
+                             width: 1.5rem;
+                             border-radius: 50%;
+                             opacity: .17;
+
+                             &:is(.active) {
+                                 opacity: 1;
+                             }
+                         }
+                     }
+                 }
+             }
+
+         }
+
+         .image-wrapper {
+             position: absolute;
+             bottom: 0;
+
+         }
+     }
+ }
