@@ -30,8 +30,10 @@
             .explore-button {
                 border-radius: 50%;
                 background: colors.$white;
-                color: colors.$black;
                 transition: outline-width .3s, opacity .3s;
+                .btn {
+                    color: colors.$black;
+                }
                 &:hover {
                     outline: 8.8rem solid rgba(255, 255, 255, 0.1);
                 }

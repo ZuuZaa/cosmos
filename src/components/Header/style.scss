@@ -134,6 +134,7 @@ header {
     &:is(.show-nav) {
         nav {
             right: 0;
+            z-index: 2;
         }
     }
 

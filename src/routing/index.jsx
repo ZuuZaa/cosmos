@@ -1,6 +1,7 @@
 import { CrewContent } from "components/crewContent";
 import { DestinationContent } from "components/destinationContent";
 import { MainLayout } from "components/mainLayout";
+import { TechnologyContent } from "components/technologyContent";
 import { Crew } from "pages/crew";
 import { Destination } from "pages/destination";
 import { Home } from "pages/home";
@@ -22,8 +23,8 @@ export const Routing = () => {
                     <Route path=":role" element={<CrewContent />} />
                 </Route>
                 <Route path="/technology" element={<Technology />}>
-                    {/* <Route index element={<Navigate to="/destination/moon" />} />
-                    <Route path=":name" element={<DestinationContent />} /> */}
+                    <Route index element={<Navigate to="/technology/launch" />} />
+                    <Route path=":id" element={<TechnologyContent />} />
                 </Route>
             </Route>
         </Routes>

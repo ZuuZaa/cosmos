@@ -1,93 +1,107 @@
 @use "assets/scss/colors.scss";
 
-.destination-content {
+.tech-container {
 
-    .destination-img {
+    .tech-content {
         display: flex;
-        justify-content: center;
-    }
+        height: 100%;
+        align-items: center;
 
-    .destination-card {
-        nav {
-            text-transform: uppercase;
+        .tech-card {
+            display: flex;
 
-            ul {
-                display: flex;
+            nav {
+                li a {
+                    color: colors.$white;
+                    border-radius: 50%;
+                    border: .1rem solid hsla(0, 0%, 100%, 0.25);
+                    display: grid;
+                    place-content: center;
 
-                li {
+                    &:hover {
+                        border-color: colors.$white;
+                    }
 
-                    a {
-                        padding-bottom: 1.2rem;
-                        display: inline-block;
-
-                        &:hover {
-                            border-bottom: .3rem solid #ffffff4d;
-                        }
-
-                        &:is(.active) {
-                            border-bottom: .3rem solid colors.$white;
-                        }
+                    &:is(.active) {
+                        color: colors.$black;
+                        background: colors.$white;
+                        border-color: colors.$white;
                     }
                 }
             }
+
+            .card-content {
+                .tech-name {
+                    white-space: nowrap;
+                }
+            }
         }
+    }
 
-        hr {
-            border: .1rem solid #383B4B;
-        }
+    .tech-img {
+        width: 100%;
 
-        .card-footer {
-            display: flex;
-
-            .text {
-                margin-top: 1.2rem;
+        .img-wrapper {
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
             }
         }
     }
 }
 
 @media only screen and (max-width: 768px) {
+    .tech-container {
+        .tech-content {
+            display: flex;
+            flex-direction: column-reverse;
+            padding-block: 3.2rem;
 
-    .destination-content {
-        .destination-img {
-            margin-top: 3.2rem;
+            .tech-card {
+                flex-direction: column;
+                text-align: center;
 
-            img {
-                width: 17rem;
-                height: 17rem;
-            }
-        }
+                nav {
+                    margin-block: 3.4rem 2.6rem;
 
-        .destination-card {
-            margin-top: 2.6rem;
+                    ul {
+                        display: flex;
+                        justify-content: center;
 
-            nav {
-                ul {
-                    justify-content: space-evenly;
+                        li {
+                            a {
+                                font-size: 1.6rem;
+                                line-height: 1.8rem;
+                                width: 4rem;
+                                height: 4rem;
+                                //  margin-block: auto;
 
-                    li {
-                        a {
-                            padding-bottom: .8rem;
+                            }
+
+                            &:nth-child(2) {
+                                margin-inline: 1.6rem;
+                            }
                         }
+
+                    }
+                }
+
+                .tech-decsription {
+                    margin-inline: 2.4rem
+                }
+
+                .card-content {
+                    .tech-name {
+                        margin-block: .9rem 1.6rem
                     }
                 }
             }
+        }
 
-            .destination-name {
-                padding-top: 2rem;
-            }
-
-            .destination-decsription {
-                margin-top: .1rem;
-            }
-
-            hr {
-                margin-block: 3.2rem;
-            }
-
-            .card-footer {
-                flex-direction: column;
-                gap: 3.2rem;
+        .tech-img {
+            .img-wrapper {
+                width: 100%;
             }
         }
     }
@@ -95,107 +109,116 @@
 
 
 @media only screen and (min-width: 768px) and (max-width: 1439px) {
+    .tech-container {
+        .tech-content {
+            display: flex;
+            flex-direction: column-reverse;
+            padding-block: 6rem;
 
-    .destination-container {
-        text-align: center;
-
-        .destination-content {
-            .destination-img {
-                margin-top: 6rem;
-
-                img {
-                    width: 30rem;
-                    height: 30rem;
-                }
-            }
-
-            .destination-card {
-                margin: 5.3rem auto 0;
-                width: 57.3rem;
+            .tech-card {
+                flex-direction: column;
+                text-align: center;
 
                 nav {
-                    ul {
-                        justify-content: space-evenly;
-
-                        li {
-                            a {
-                                padding-bottom: .8rem;
-                            }
-                        }
-                    }
-                }
-
-                .destination-name {
-                    padding-top: 3.2rem;
-                }
-
-                .destination-decsription {
-                    margin-top: .8rem;
-                }
-
-                hr {
-                    margin-block: 4.8rem 2.8rem;
-                }
-
-                .card-footer {
-                    flex-direction: row;
-                    justify-content: space-evenly;
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 1440px) {
-
-
-    .destination-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-
-        .destination-content {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-
-            .destination-card {
-                width: 44.5rem;
-
-                nav {
+                    margin-block: 5.6rem 4.4rem;
 
                     ul {
                         display: flex;
+                        justify-content: center;
 
                         li {
-                            margin-right: 3.6rem;
-
                             a {
-                                padding-bottom: 1.2rem;
+                                font-size: 2.4rem;
+                                line-height: 2.8rem;
+                                width: 6rem;
+                                height: 6rem;
+                                margin-block: auto;
+                            }
 
+                            &:nth-child(2) {
+                                margin-inline: 1.6rem;
                             }
                         }
                     }
                 }
 
-                .destination-name {
-                    margin-top: 3.7rem;
+                .tech-decsription {
+                    width: 45.8rem;
                 }
 
-                .destination-decsription {
-                    margin-top: 1.4rem;
+                .card-content {
+                    .tech-name {
+                        margin-block: 1.6rem
+                    }
                 }
+            }
+        }
 
-                hr {
-                    margin-top: 5.4rem;
-                }
-
-                .card-footer {
-                    margin-top: 2.8rem;
-                    gap: 6.8rem;
-
+        .tech-img {
+            .img-wrapper {
+                img {
+                    height: 100%;
+                    width: 100%;
                 }
             }
         }
     }
+
+}
+
+@media only screen and (min-width: 1440px) {
+    .tech-container {
+        height: 100%;
+
+        .tech-content {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            padding-block: 2.6rem;
+
+            .tech-card {
+
+                nav {
+                    margin-right: 8rem;
+
+                    li a {
+                        color: colors.$white;
+                        font-size: 3.3rem;
+                        line-height: 3.7rem;
+                        width: 8rem;
+                        height: 8rem;
+                        margin-bottom: 3.2rem;
+                    }
+                }
+
+                .tech-decsription {
+                    width: 44.4rem;
+                }
+
+                .card-content {
+                    .tech-name {
+                        margin-block: 1.1rem 1.7rem;
+                    }
+                }
+            }
+        }
+
+        .tech-img {
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+
+            .img-wrapper {
+                height: 52.7rem;
+                width: 51.5rem;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
 }
