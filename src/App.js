@@ -1,10 +1,10 @@
-import { Routing } from "./routing";
+import { MainLayout } from "components/mainLayout";
+// import { Routing } from "./routing";
 
 function App() {
   return (
     <div className="App">
-      <Routing/>
-
+      <MainLayout/>
     </div>
   );
 }
