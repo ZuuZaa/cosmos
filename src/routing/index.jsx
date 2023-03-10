@@ -6,7 +6,8 @@ import { MainLayout } from "components/mainLayout";
 // import { Destination } from "pages/destination";
 import { Home } from "pages/home";
 // import { Technology } from "pages/technology";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+// import { Routes, Route, Navigate } from "react-router-dom";
 
 export const Routing = () => {
 
