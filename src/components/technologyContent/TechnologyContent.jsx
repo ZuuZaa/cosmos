@@ -34,7 +34,7 @@ export const TechnologyContent = () => {
   useEffect(() => {
     setTarget(data.technology.filter(item => item.id === id)[0])
     console.log(target, data.technology, id)
-  }, [id])
+  }, [id, target])
 
   return (
     <div className="tech-container">

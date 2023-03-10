@@ -16,7 +16,7 @@ export const DestinationContent = () => {
 
   useEffect(() => {
     setTarget(data.destinations.filter(item => item.name.toLowerCase() === name)[0])
-  }, [name])
+  }, [name, target])
 
   return (
     <div className="destination-container">
