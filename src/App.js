@@ -1,4 +1,4 @@
-import { MainLayout } from "./components/mainLayout";
+import { MainLayout } from "components/mainLayout";
 // import { Routing } from "./routing";
 
 function App() {
