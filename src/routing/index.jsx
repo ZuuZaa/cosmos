@@ -1,5 +1,5 @@
 import { CrewContent } from "components/crewContent";
-import { DestinationContent } from "../components/destinationContent";
+import { DestinationContent } from "components/destinationContent";
 import { MainLayout } from "components/mainLayout";
 import { TechnologyContent } from "components/technologyContent";
 import { Crew } from "pages/crew";
